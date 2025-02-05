@@ -11,7 +11,7 @@ const Header = () => {
       </div>
         <div className='flex items-center justify-between gap-5 '>
             {links.map(link=>
-            <Link key={link.id} href="/"><Image src={link.img} alt='logo' className='text-text hover:text-distinct hover:shadow-md border border-text hover:scale-105 rounded-full' width={22} height={22} /></Link>
+            <Link key={link.id} href={link.href}><Image src={link.img} alt='logo' className='text-text hover:text-distinct hover:shadow-md border border-text hover:scale-105 rounded-full' width={22} height={22} /></Link>
             )}
         </div>
     </div>
