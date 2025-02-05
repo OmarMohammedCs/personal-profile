@@ -5,7 +5,7 @@ import NET from "vanta/dist/vanta.net.min";
 
 const VantaComponent: React.FC = () => {
   const myRef = useRef<HTMLDivElement>(null);
-  const vantaEffect = useRef<any>(null);
+  const vantaEffect = useRef<ReturnType<typeof NET> | null>(null);
 
   useEffect(() => {
     if (!vantaEffect.current && myRef.current) {
@@ -21,23 +21,20 @@ const VantaComponent: React.FC = () => {
         scaleMobile: 1.0,
         color: 0x9333ea,
         backgroundColor: 0x93c5fd,
-        points: 10, 
+        points: 10,
         maxDistance: 15.0,
         spacing: 18.0,
         speed: 2.0,
       });
 
-    
       const handleResize = () => {
-        if (vantaEffect.current) {
-          vantaEffect.current.resize();
-        }
+        vantaEffect.current?.resize?.();
       };
 
       window.addEventListener("resize", handleResize);
 
       return () => {
-        if (vantaEffect.current) vantaEffect.current.destroy();
+        vantaEffect.current?.destroy?.();
         window.removeEventListener("resize", handleResize);
       };
     }

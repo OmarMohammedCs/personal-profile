@@ -2,14 +2,14 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Transition from "./Transition";
-import Tabs from "./Tabs";
+import Tabs from "./tabs";
 
 
 const Counter = ({ value }: { value: number }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
+    const start = 0;
     const end = value;
     if (start === end) return;
 
@@ -64,7 +64,7 @@ const About = () => {
             Experienced in JavaScript, TypeScript, React, and Next.js, with expertise in RESTful APIs (Express, NestJS) and database management (MongoDB, SQLite, MySQL). Proficient in PHP and Python, focused on building efficient, scalable solutions and continuously improving data structures and algorithms. 🚀
           </p>
           
-          {/* ✅ إحصائيات المطور */}
+         
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-gray-900 dark:text-white w-full text-center">
             {stats.map((item, index) => (
               <motion.div
