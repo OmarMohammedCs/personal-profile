@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const Header = () => {
-    const links = [{id:1,img:"facebook.svg"},{id:2,img:"github.svg"},{id:3,img:"linkedin.svg"}]
+    const links = [{id:1,img:"facebook.svg",href:"/"},{id:2,img:"github.svg",href:"https://github.com/OmarMohammedCs"},{id:3,img:"linkedin.svg",href:"https://www.linkedin.com/in/omar-mohammed-25a390342"}]
   return (
     <div className='fixed top-0 w-full flex items-center justify-between px-10 md:px-32 py-2 z-30'>
 <div className="text-3xl font-bold">
